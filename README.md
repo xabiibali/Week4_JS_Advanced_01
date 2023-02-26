@@ -16,7 +16,7 @@ With some basic JavaScript principles in hand, we can now expand our skills out 
 
 ## MVP
 
-* [ ] Review the contents of the [closure.js](closure.js), [array_methods.js](array_methods.js), and [callbacks.js](callbacks.js)
+* [ ] Review the contents of the [array_methods.js](array_methods.js), and [callbacks.js](callbacks.js)
 * [ ] Complete the problems provided to you but skip over stretch problems until you are complete with every other JS file first.
 
 ## Stretch Goals
