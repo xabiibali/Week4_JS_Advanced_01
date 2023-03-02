@@ -20,21 +20,24 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 */
 
 
-function getLength(arr, cb) {
-  // getLength passes the length of the array into the callback.
-}
 
-function last(arr, cb) {
+
+
+// function getLength(arr, cb) {
+   // getLength passes the length of the array into the callback.
+// }
+
+// function last(arr, cb) {
   // last passes the last item of the array into the callback.
-}
+// }
 
-function sumNums(x, y, cb) {
+// function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
-}
+// }
 
-function multiplyNums(x, y, cb) {
-  // multiplyNums multiplies two numbers and passes the result to the callback.
-}
+// function multiplyNums(x, y, cb) {
+//   // multiplyNums multiplies two numbers and passes the result to the callback.
+// }
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
@@ -48,3 +51,73 @@ function removeDuplicates(array, cb) {
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
 }
+
+
+const itemColback = function(cb){
+return cb(items) 
+} 
+
+const arrfunct = function(item){
+  return item 
+}
+
+console.log(itemColback(arrfunct));
+
+
+function getLength(arr, cb) {
+  // getLength passes the length of the array into the callback.
+  return cb(arr.length)
+}
+
+getLength(items, function(leng){
+  console.log(leng);
+})
+
+
+function last(arr, cb) {
+  // last passes the last item of the array into the callback.
+return cb(arr[arr.length - 1])
+
+}
+
+last(items, function(lastsLength){
+  console.log(lastsLength);
+})
+
+function sumNums(x, y, cb) {
+  // sumNums adds two numbers (x, y) and passes the result to the callback.
+  return cb(x + y)
+}
+
+sumNums(7, 4 , function(plus){
+  console.log(plus);
+})
+
+function multiplyNums(x, y, cb) {
+  // multiplyNums multiplies two numbers and passes the result to the callback.
+  return cb (x * y)
+}
+
+multiplyNums(11, 6, function(multiply){
+  console.log(multiply);
+})
+
+function contains(item, list, cb) {
+  // contains checks if an item is present inside of the given array/list.
+  // Pass true to the callback if it is, otherwise pass false.
+if(list.includes(item)){
+ cb(true)
+}else{
+  cb(false)
+}
+
+}
+
+ let cont = contains('Notebook',  items , function(conts){
+  console.log(conts);
+ })
+
+
+ let conting = contains('laptop', items , function(conts){
+  console.log(conts);
+ })
